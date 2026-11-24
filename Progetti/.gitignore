@@ -1,0 +1,14 @@
+# Impostazioni locali di Visual Studio
+.vs/
+*.vcxproj.user
+*.suo
+
+# Output di compilazione C++
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+*.pdb
+*.ilk
+*.pch
+*.tlog

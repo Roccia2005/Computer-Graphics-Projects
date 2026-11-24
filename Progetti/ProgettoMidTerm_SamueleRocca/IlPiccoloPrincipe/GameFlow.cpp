@@ -1,0 +1,111 @@
+#include "GameFlow.h"
+#include "LevelCatalog.h"
+#include <iterator>
+
+namespace {
+
+constexpr DialogueLine intro[] = {
+    {DialogueSpeaker::Prince, "Devo tornare sul mio pianeta. La Rosa mi aspetta."},
+    {DialogueSpeaker::Fox, u8"Il ponte \u00e8 rotto. Possiamo prendere una navetta alla stazione."},
+    {DialogueSpeaker::Prince, "Mi accompagni?"},
+    {DialogueSpeaker::Fox, u8"Volentieri. \u00c8 da un po\u2019 che voglio conoscerla."}
+};
+
+constexpr DialogueLine finale[] = {
+    {DialogueSpeaker::Fox, u8"\u00c8 lei la Rosa di cui mi parlavi?"},
+    {DialogueSpeaker::Prince, u8"S\u00ec. Le ho parlato anche di te."},
+    {DialogueSpeaker::Fox, u8"Ah s\u00ec? E che cosa le hai detto?"},
+    {DialogueSpeaker::Prince, "Che un giorno saremmo venuti a trovarla insieme."}
+};
+
+}
+
+void GameFlow::applyAction(UiAction action, float timeSeconds)
+{
+    switch (m_screen) {
+    case Screen::MainMenu:
+        if (action == UiAction::StartStory) {
+            m_dialogueIndex = 0;
+            m_screen = Screen::IntroDialogue;
+        } else if (action == UiAction::StartTutorial) {
+            m_tutorial.emplace(Levels::tutorial());
+            m_worldTime = timeSeconds;
+            m_screen = Screen::Tutorial;
+        }
+        break;
+
+    case Screen::IntroDialogue:
+        if (action == UiAction::AdvanceDialogue && ++m_dialogueIndex == std::size(intro)) {
+            m_story.emplace();
+            m_worldTime = timeSeconds;
+            m_screen = Screen::Story;
+        }
+        break;
+
+    case Screen::Story:
+        if (action == UiAction::RestartRoom) {
+            m_worldTime = timeSeconds;
+            m_story->restartCurrentLevel();
+        }
+        break;
+
+    case Screen::Tutorial:
+        if (action == UiAction::BackToMenu) {
+            m_tutorial.reset();
+            m_screen = Screen::MainMenu;
+        } else if (action == UiAction::RestartRoom) {
+            m_worldTime = timeSeconds;
+            m_tutorial->reset();
+        }
+        break;
+
+    case Screen::FinalDialogue:
+        if (action == UiAction::AdvanceDialogue && ++m_dialogueIndex == std::size(finale)) {
+            m_story.reset();
+            m_screen = Screen::MainMenu;
+        }
+        break;
+    }
+}
+
+void GameFlow::update(float dt, float timeSeconds, const PlayerInput& first, const PlayerInput& second)
+{
+    if (m_screen == Screen::Story) {
+        m_worldTime = timeSeconds;
+        m_story->update(dt, first, second, m_worldTime);
+        if (m_story->finished()) {
+            m_dialogueIndex = 0;
+            m_screen = Screen::FinalDialogue;
+        }
+    } else if (m_screen == Screen::Tutorial) {
+        m_worldTime = timeSeconds;
+        m_tutorial->update(dt, first, second, m_worldTime);
+    }
+}
+
+const DialogueLine* GameFlow::dialogueLine() const
+{
+    if (m_screen == Screen::IntroDialogue) {
+        return &intro[m_dialogueIndex];
+    }
+    if (m_screen == Screen::FinalDialogue) {
+        return &finale[m_dialogueIndex];
+    }
+    return nullptr;
+}
+
+const Level* GameFlow::levelToDraw() const
+{
+    if (m_story) {
+        return &m_story->level();
+    }
+    if (m_tutorial) {
+        return &*m_tutorial;
+    }
+    return nullptr;
+}
+
+std::size_t GameFlow::levelNumber() const
+{
+    return m_story ? m_story->levelNumber() : 0;
+}

@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{A0E1C663-4B08-4A4D-B567-80B6071C5001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{A0E1C663-4B08-4A4D-B567-80B6071C5002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Logica">
+      <UniqueIdentifier>{BF7D3AB8-6F37-431A-A46E-D56E25CF6AF1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Logica\Entità">
+      <UniqueIdentifier>{72FC4FDC-0960-4D44-A524-549A084FB429}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Rendering">
+      <UniqueIdentifier>{3CE70946-1293-4142-9062-9A53E13E5F5C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Forme">
+      <UniqueIdentifier>{7FF14F8F-79D0-43DF-B355-60F2059AF4BF}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Input e GUI">
+      <UniqueIdentifier>{8F17434B-286C-4C8C-A870-88EDE0A558A0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Logica">
+      <UniqueIdentifier>{32BDCF81-CB0D-433F-B8FC-F640F47FCC33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Logica\Entità">
+      <UniqueIdentifier>{32C19335-80F8-4391-AD99-F916845276E2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Rendering">
+      <UniqueIdentifier>{1350EF78-0C51-4BDE-AD69-A33D2739AD38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Forme">
+      <UniqueIdentifier>{53AD16C4-F561-43C0-81FB-F43174127AE1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Input e GUI">
+      <UniqueIdentifier>{6304C34F-4749-4F60-9A4A-211C6999D19C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Shader">
+      <UniqueIdentifier>{A0E1C663-4B08-4A4D-B567-80B6071C5003}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dipendenze esterne">
+      <UniqueIdentifier>{A0E1C663-4B08-4A4D-B567-80B6071C5004}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dipendenze esterne\GLAD">
+      <UniqueIdentifier>{A0E1C663-4B08-4A4D-B567-80B6071C5005}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dipendenze esterne\GLFW">
+      <UniqueIdentifier>{A0E1C663-4B08-4A4D-B567-80B6071C5006}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dipendenze esterne\ImGui">
+      <UniqueIdentifier>{A0E1C663-4B08-4A4D-B567-80B6071C5007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dipendenze esterne\ImGui\Header Files">
+      <UniqueIdentifier>{A0E1C663-4B08-4A4D-B567-80B6071C5008}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dipendenze esterne\ImGui\Source Files">
+      <UniqueIdentifier>{A0E1C663-4B08-4A4D-B567-80B6071C5009}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Geometry.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Renderer.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="KeysInput.cpp">
+      <Filter>Source Files\Input e GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Gui.cpp">
+      <Filter>Source Files\Input e GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="DialoguePanel.cpp">
+      <Filter>Source Files\Input e GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="GuiPanels.cpp">
+      <Filter>Source Files\Input e GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="StarHud.cpp">
+      <Filter>Source Files\Input e GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies_GL_GLFW\glad.c">
+      <Filter>Dipendenze esterne\GLAD</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies_GL_GLFW\ImGui\imgui.cpp">
+      <Filter>Dipendenze esterne\ImGui\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies_GL_GLFW\ImGui\imgui_demo.cpp">
+      <Filter>Dipendenze esterne\ImGui\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies_GL_GLFW\ImGui\imgui_draw.cpp">
+      <Filter>Dipendenze esterne\ImGui\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies_GL_GLFW\ImGui\imgui_impl_glfw.cpp">
+      <Filter>Dipendenze esterne\ImGui\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies_GL_GLFW\ImGui\imgui_impl_opengl3.cpp">
+      <Filter>Dipendenze esterne\ImGui\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies_GL_GLFW\ImGui\imgui_tables.cpp">
+      <Filter>Dipendenze esterne\ImGui\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="dependencies_GL_GLFW\ImGui\imgui_widgets.cpp">
+      <Filter>Dipendenze esterne\ImGui\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundRenderer.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="StarRenderer.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="Crate.cpp">
+      <Filter>Source Files\Logica\Entità</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneCollider.cpp">
+      <Filter>Source Files\Logica\Entità</Filter>
+    </ClCompile>
+    <ClCompile Include="ObjLoader.cpp">
+      <Filter>Source Files\Forme</Filter>
+    </ClCompile>
+    <ClCompile Include="DecorativeShapes.cpp">
+      <Filter>Source Files\Forme</Filter>
+    </ClCompile>
+    <ClCompile Include="ExitDoor.cpp">
+      <Filter>Source Files\Logica\Entità</Filter>
+    </ClCompile>
+    <ClCompile Include="Game.cpp">
+      <Filter>Source Files\Logica</Filter>
+    </ClCompile>
+    <ClCompile Include="GameFlow.cpp">
+      <Filter>Source Files\Logica</Filter>
+    </ClCompile>
+    <ClCompile Include="Enemy.cpp">
+      <Filter>Source Files\Logica\Entità</Filter>
+    </ClCompile>
+    <ClCompile Include="Level.cpp">
+      <Filter>Source Files\Logica</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelCatalog.cpp">
+      <Filter>Source Files\Logica</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogueView.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="LevelView.cpp">
+      <Filter>Source Files\Rendering</Filter>
+    </ClCompile>
+    <ClCompile Include="MovingWall.cpp">
+      <Filter>Source Files\Logica\Entità</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Source Files\Logica\Entità</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerPhysics.cpp">
+      <Filter>Source Files\Logica\Entità</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerHorizontalMotion.cpp">
+      <Filter>Source Files\Logica\Entità</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerSupport.cpp">
+      <Filter>Source Files\Logica\Entità</Filter>
+    </ClCompile>
+    <ClCompile Include="PlayerVerticalMotion.cpp">
+      <Filter>Source Files\Logica\Entità</Filter>
+    </ClCompile>
+    <ClCompile Include="PressurePlate.cpp">
+      <Filter>Source Files\Logica\Entità</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MeshData.h">
+      <Filter>Header Files\Forme</Filter>
+    </ClInclude>
+    <ClInclude Include="Geometry.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Renderer.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="KeysInput.h">
+      <Filter>Header Files\Input e GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Gui.h">
+      <Filter>Header Files\Input e GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="DialoguePanel.h">
+      <Filter>Header Files\Input e GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiPanels.h">
+      <Filter>Header Files\Input e GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="StarHud.h">
+      <Filter>Header Files\Input e GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies_GL_GLFW\include\glad\glad.h">
+      <Filter>Dipendenze esterne\GLAD</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies_GL_GLFW\include\KHR\khrplatform.h">
+      <Filter>Dipendenze esterne\GLAD</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies_GL_GLFW\include\GLFW\glfw3.h">
+      <Filter>Dipendenze esterne\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies_GL_GLFW\include\GLFW\glfw3native.h">
+      <Filter>Dipendenze esterne\GLFW</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies_GL_GLFW\ImGui\imconfig.h">
+      <Filter>Dipendenze esterne\ImGui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies_GL_GLFW\ImGui\imgui.h">
+      <Filter>Dipendenze esterne\ImGui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies_GL_GLFW\ImGui\imgui_impl_glfw.h">
+      <Filter>Dipendenze esterne\ImGui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies_GL_GLFW\ImGui\imgui_impl_opengl3.h">
+      <Filter>Dipendenze esterne\ImGui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies_GL_GLFW\ImGui\imgui_impl_opengl3_loader.h">
+      <Filter>Dipendenze esterne\ImGui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies_GL_GLFW\ImGui\imgui_internal.h">
+      <Filter>Dipendenze esterne\ImGui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies_GL_GLFW\ImGui\imstb_rectpack.h">
+      <Filter>Dipendenze esterne\ImGui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies_GL_GLFW\ImGui\imstb_textedit.h">
+      <Filter>Dipendenze esterne\ImGui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="dependencies_GL_GLFW\ImGui\imstb_truetype.h">
+      <Filter>Dipendenze esterne\ImGui\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BackgroundRenderer.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="StarRenderer.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="Crate.h">
+      <Filter>Header Files\Logica\Entità</Filter>
+    </ClInclude>
+    <ClInclude Include="Pushable.h">
+      <Filter>Header Files\Logica\Entità</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneCollider.h">
+      <Filter>Header Files\Logica\Entità</Filter>
+    </ClInclude>
+    <ClInclude Include="ObjLoader.h">
+      <Filter>Header Files\Forme</Filter>
+    </ClInclude>
+    <ClInclude Include="DecorativeShapes.h">
+      <Filter>Header Files\Forme</Filter>
+    </ClInclude>
+    <ClInclude Include="ExitDoor.h">
+      <Filter>Header Files\Logica\Entità</Filter>
+    </ClInclude>
+    <ClInclude Include="Game.h">
+      <Filter>Header Files\Logica</Filter>
+    </ClInclude>
+    <ClInclude Include="GameFlow.h">
+      <Filter>Header Files\Logica</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogueSpeaker.h">
+      <Filter>Header Files\Logica</Filter>
+    </ClInclude>
+    <ClInclude Include="Enemy.h">
+      <Filter>Header Files\Logica\Entità</Filter>
+    </ClInclude>
+    <ClInclude Include="Level.h">
+      <Filter>Header Files\Logica</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogueView.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelView.h">
+      <Filter>Header Files\Rendering</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelDefinition.h">
+      <Filter>Header Files\Logica</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelCatalog.h">
+      <Filter>Header Files\Logica</Filter>
+    </ClInclude>
+    <ClInclude Include="Config.h">
+      <Filter>Header Files\Logica</Filter>
+    </ClInclude>
+    <ClInclude Include="LevelTypes.h">
+      <Filter>Header Files\Logica</Filter>
+    </ClInclude>
+    <ClInclude Include="LinearTransition.h">
+      <Filter>Header Files\Logica\Entità</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingWall.h">
+      <Filter>Header Files\Logica\Entità</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Header Files\Logica\Entità</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerPhysics.h">
+      <Filter>Header Files\Logica\Entità</Filter>
+    </ClInclude>
+    <ClInclude Include="PressurePlate.h">
+      <Filter>Header Files\Logica\Entità</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="dependencies_GL_GLFW\lib\glfw3.lib">
+      <Filter>Dipendenze esterne\GLFW</Filter>
+    </None>
+    <None Include="README_PRIMA_DI_INIZIARE.txt" />
+    <None Include="packages.config" />
+    <None Include="shaders\star.vert">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="shaders\moving_wall.vert">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="shaders\moving_wall.frag">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="shaders\background.frag">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="shaders\background.vert">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="shaders\basic.frag">
+      <Filter>Shader</Filter>
+    </None>
+    <None Include="shaders\basic.vert">
+      <Filter>Shader</Filter>
+    </None>
+  </ItemGroup>
+</Project>
