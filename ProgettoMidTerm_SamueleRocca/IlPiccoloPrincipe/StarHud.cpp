@@ -64,9 +64,12 @@ void StarHud::draw(const StarProgress& stars, std::optional<float> remainingSeco
         && worldTime - *stars.unlockedAt < noticeSeconds;
     const bool expiring = remainingSeconds && *remainingSeconds <= 10.0f;
     const ImVec4 alertColor{1.0f, 0.55f, 0.35f, 1.0f};
+
     const auto counter = stars.total > 0
         ? "Stelle " + std::to_string(stars.collected) + "/" + std::to_string(stars.total) : "";
+
     const auto timer = remainingSeconds ? timerText(*remainingSeconds) : "";
+
     struct Label {
         const char* text;
         ImVec4 color;
